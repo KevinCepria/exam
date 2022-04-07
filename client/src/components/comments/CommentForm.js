@@ -1,11 +1,9 @@
-import React, { useState, useContext } from "react";
-import AppContext from "../../context/AppContext";
+import React, { useState } from "react";
 import json from "../../api/json";
 
-const CommentForm = ({ questionId, setComments, comments }) => {
+const CommentForm = ({ questionId, setComments, comments, candidateId }) => {
   const [comment, setComment] = useState("");
   const [ isFetching, setIsFetching ] = useState(false);
-  const { selectedCandidate: { id: candidateId }} = useContext(AppContext)
 
   const onSubmit = (e) => {
     e.preventDefault();

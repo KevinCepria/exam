@@ -1,6 +1,8 @@
-import React from "react";
+import React, { useContext } from "react";
+import AppContext from "../../context/AppContext";
 
-const CandidateItem = ({ candidate, setSelectedCandidate }) => {
+const CandidateItem = ({ candidate }) => {
+  const { setSelectedCandidate } = useContext(AppContext)
   return (
     <div
       onClick={() => setSelectedCandidate(candidate)}
