@@ -1,7 +1,10 @@
+body {
+  width: 100vw;
+}
+
 .candidate-item {
   cursor: pointer;
   padding: 12px!important;
-
   
   &:hover {
     background-color: whitesmoke !important;
